@@ -1,0 +1,41 @@
+{
+	"namespace": "oa",
+	"OffhandArmor": {
+		"type": "panel",
+		"anchor_from": "bottom_left",
+		"anchor_to": "bottom_left",
+		"size": [
+			80,
+			16
+		],
+		"offset": [
+			10,
+			-10
+		],
+		"controls": [
+			{
+				"_": {
+					"type": "custom",
+					"layer": 50,
+					"renderer": "live_player_renderer",
+					"size": [
+						16,
+						16
+					],
+					"offset": [
+						0,
+						1000
+					]
+				}
+			}
+		],
+		"bindings": [
+			{
+				"binding_type": "view",
+				"source_control_name": "ArmorOffhandOn",
+				"source_property_name": "#toggle_state",
+				"target_property_name": "#visible"
+			}
+		]
+	}
+}

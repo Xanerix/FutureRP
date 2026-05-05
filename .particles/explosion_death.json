@@ -1,0 +1,97 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "minecraft:death_explosion_emitter",
+      "basic_render_parameters": {
+        "material": "particles_blend",
+        "texture": "textures/particle/blood_drop"
+      }
+    },
+    "components": {
+      "minecraft:emitter_rate_instant": {
+        "num_particles": 100
+      },
+      "minecraft:emitter_lifetime_once": {},
+      "minecraft:emitter_shape_point": {
+        "offset": [
+          0,
+          0.1,
+          0
+        ],
+        "direction": [
+          "Math.random(-0.3, 0.3)",
+          "Math.random(0.5, 0.7)",
+          "Math.random(-0.3, 0.3)"
+        ]
+      },
+      "minecraft:particle_lifetime_expression": {
+        "max_lifetime": "Math.random(30.0, 40.0)"
+      },
+      "minecraft:particle_expire_if_in_blocks": [
+        "minecraft:water",
+        "minecraft:lava",
+        "minecraft:fire"
+      ],
+      "minecraft:particle_initial_spin": {
+        "rotation": "Math.random(0, 180)"
+      },
+      "minecraft:particle_initial_speed": 2,
+      "minecraft:particle_motion_dynamic": {
+        "linear_acceleration": [
+          "(variable.particle_random_1 * 2.0-1.0)",
+          -9.81,
+          "(variable.particle_random_2 * 2.0-1.0)"
+        ],
+        "linear_drag_coefficient": 0
+      },
+      "minecraft:particle_appearance_billboard": {
+        "size": [
+          0.1,
+          0.1
+        ],
+        "facing_camera_mode": "lookat_xyz",
+        "uv": {
+          "texture_width": 16,
+          "texture_height": 16,
+          "uv": [
+            0,
+            0
+          ],
+          "uv_size": [
+            16,
+            16
+          ]
+        }
+      },
+      "minecraft:particle_motion_collision": {
+        "expire_on_contact": true,
+        "collision_drag": 5,
+        "coefficient_of_restitution": 0,
+        "collision_radius": 0.03,
+        "events": [
+          {
+            "event": "fall"
+          }
+        ]
+      },
+      "minecraft:particle_appearance_lighting": {}
+    },
+    "events": {
+      "fall": {
+        "randomize": [
+          {
+            "weight": 50,
+            "particle_effect": {
+              "effect": "kgz:blood_puddle",
+              "type": "emitter"
+            }
+          },
+          {
+            "weight": 50
+          }
+        ]
+      }
+    }
+  }
+}

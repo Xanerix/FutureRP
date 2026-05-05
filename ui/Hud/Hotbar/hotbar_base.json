@@ -1,0 +1,212 @@
+{
+  "namespace": "hotbar_base",
+  "slot_anim_size": {
+    "anim_type": "size",
+    "easing": "out_cubic",
+    "duration": 0.35,
+    "from": [
+      "5%",
+      "5%"
+    ],
+    "to": [
+      "100%",
+      "100%"
+    ],
+    "reset_event": "button.hotbar_anim"
+  },
+  "slot_anim_alpha": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+    "duration": 0.35,
+    "from": 0.1,
+    "to": 0.3,
+    "reset_event": "button.hotbar_anim"
+  },
+  "gui_hotbar_grid_item": {
+    "type": "panel",
+    "layer": 1,
+    "size": [
+      20,
+      20
+    ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$stack_count_required": true,
+    "$durability_bar_required": true,
+    "controls": [
+      {
+        "hotbar_slot_selected_image": {
+          "type": "image",
+          "texture": "ui/pic/HotbarSelected",
+          "size": "@hotbar_base.slot_anim_size",
+          "alpha": "@hotbar_base.slot_anim_alpha",
+          "layer": 1,
+          "animation_reset_name": "button.hotbar_anim",
+          "bindings": [
+            {
+              "binding_name": "#slot_selected",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$hotbar_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "hotbar_renderer": {
+          "type": "custom",
+          "renderer": "hotbar_renderer",
+          "size": [
+            20,
+            20
+          ],
+          "layer": 0,
+          "bindings": [
+            {
+              "binding_collection_name": "$hotbar_collection_name",
+              "binding_type": "collection_details"
+            }
+          ],
+          "controls": [
+            {
+              "hotbar_slot_image": {
+                "type": "image",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  20,
+                  20
+                ],
+                "layer": 0,
+                "alpha": 0.45
+              }
+            }
+          ]
+        }
+      },
+      {
+        "hotbar_parent": {
+          "type": "panel",
+          "size": [
+            18,
+            18
+          ],
+          "controls": [
+            {
+              "item_icon@common.item_renderer": {
+                "$item_collection_name": "$hotbar_collection_name",
+                "property_bag": {
+                  "force_update": true
+                },
+                "layer": 2,
+                "size": [
+                  16,
+                  16
+                ]
+              }
+            },
+            {
+              "item_count@common.stack_count_label": {
+                "font_type": "$global_font_type",
+                "layer": 3,
+                "$item_collection_name": "$hotbar_collection_name",
+                "$stack_count_collection_name": "$hotbar_collection_name",
+                "bindings": [
+                  {
+                    "binding_name": "#inventory_stack_count",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$stack_count_collection_name"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "hotbar_slot_button": {
+          "type": "button",
+          "focus_identifier": "",
+          "focus_change_down": "",
+          "focus_change_up": "",
+          "focus_change_left": "",
+          "focus_change_right": "",
+          "focus_enabled": true,
+          "layer": 2,
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.hotbar_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.hotbar_ok",
+              "mapping_type": "focused"
+            },
+            {
+              "to_button_id": "button.slot_pressed",
+              "mapping_type": "pressed"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_collection_name": "$hotbar_collection_name",
+              "binding_type": "collection_details"
+            }
+          ]
+        }
+      },
+      {
+        "touch_input_panel": {
+          "type": "button",
+          "layer": 3,
+          "consume_hover_events": false,
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.hotbar_anim",
+              "mapping_type": "pressed",
+              "consume_event": false
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "text_button@common.button": {
+    "$pressed_button_name": "$pressed_button_name",
+    "controls": [
+      {
+        "default@hotbar_base.text_button_default": {}
+      },
+      {
+        "hover@hotbar_base.text_button_hover": {}
+      },
+      {
+        "pressed@hotbar_base.text_button_pressed": {}
+      }
+    ]
+  },
+  "text_button_default": {
+    "type": "label",
+    "font_type": "$global_font_type",
+    "text": "$button_text",
+    "color": "white",
+    "font_scale_factor": 1.1
+  },
+  "text_button_hover": {
+    "type": "label",
+    "font_type": "$global_font_type",
+    "text": "$button_text",
+    "color": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "font_scale_factor": 1.1
+  },
+  "text_button_pressed@hotbar_base.text_button_hover": {}
+}

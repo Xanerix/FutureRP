@@ -1,0 +1,36 @@
+{
+  "game.player.attack.nodamage": {
+    "max_distance": 0,
+    "min_distance": 0,
+    "sounds": [
+      {
+        "name": "sounds/xc/click",
+        "volume": 0.5,
+        "pitch": 1.0,
+        "is3D": false
+      }
+    ]
+  },
+  "game.player.attack.strong": {
+    "max_distance": 0,
+    "min_distance": 0,
+    "sounds": [
+      {
+        "name": "sounds/xc/click",
+        "volume": 0.5,
+        "pitch": 1.0,
+        "is3D": false
+      }
+    ]
+  },
+  "game.player.die": {
+    "sounds": [
+      {
+        "name": "sounds/xc/kill",
+        "volume": 0.5,
+        "pitch": 1.0,
+        "is3D": true
+      }
+    ]
+  }
+}

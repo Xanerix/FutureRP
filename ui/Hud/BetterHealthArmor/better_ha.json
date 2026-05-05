@@ -1,0 +1,152 @@
+{
+	"namespace": "better_ha",
+	"Classic": {
+		"type": "panel",
+		"size": [
+			180,
+			50
+		],
+		"controls": [
+			{
+				"heart_rend@hud.heart_renderer": {
+					"layer": 1,
+					"offset": [
+						-1,
+						-10
+					],
+					"anchor_from": "bottom_left",
+					"anchor_to": "bottom_left"
+				}
+			},
+			{
+				"horse_heart_rend_0@hud.horse_heart_renderer": {
+					"offset": [
+						180,
+						-26
+					],
+					"anchor_from": "bottom_left",
+					"anchor_to": "bottom_left",
+					"bindings": [
+						{
+							"binding_name": "#is_creative_mode",
+							"binding_name_override": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"horse_heart_rend_1@hud.horse_heart_renderer": {
+					"offset": [
+						180,
+						-20
+					],
+					"anchor_from": "bottom_left",
+					"anchor_to": "bottom_left",
+					"bindings": [
+						{
+							"binding_name": "#is_not_creative_mode",
+							"binding_name_override": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"armor_rend@hud.armor_renderer": {
+					"offset": [
+						-1,
+						-10
+					],
+					"anchor_from": "bottom_left",
+					"anchor_to": "bottom_left"
+				}
+			},
+			{
+				"hunger_rend@hud.hunger_renderer": {
+					"offset": [
+						180,
+						-10
+					],
+					"anchor_from": "bottom_left",
+					"anchor_to": "bottom_left"
+				}
+			},
+			{
+				"bubbles_rend_0@hud.bubbles_renderer": {
+					"offset": [
+						180,
+						-20
+					],
+					"anchor_from": "bottom_left",
+					"anchor_to": "bottom_left",
+					"bindings": [
+						{
+							"binding_name": "#is_not_riding",
+							"binding_name_override": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"bubbles_rend_1@hud.bubbles_renderer": {
+					"offset": [
+						180,
+						-40
+					],
+					"anchor_from": "bottom_left",
+					"anchor_to": "bottom_left",
+					"bindings": [
+						{
+							"binding_name": "#is_riding",
+							"binding_name_override": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"horse_jump_rend@hud.horse_jump_renderer": {
+					"anchor_from": "bottom_middle",
+					"anchor_to": "bottom_middle",
+					"offset": [
+						0,
+						0
+					],
+					"layer": 7,
+					"bindings": [
+						{
+							"binding_name": "#is_riding",
+							"binding_name_override": "#visible"
+						}
+					]
+				}
+			}
+		]
+	},
+	"HealthArmor": {
+		"type": "panel",
+		"size": [
+			220,
+			10
+		],
+		"offset": [
+			0,
+			-20
+		],
+		"controls": [
+			{
+				"_": {
+					"type": "custom",
+					"layer": 50,
+					"renderer": "live_player_renderer",
+					"size": [
+						16,
+						16
+					],
+					"offset": [
+						0,
+						4000
+					]
+				}
+			}
+		]
+	}
+}

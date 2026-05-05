@@ -1,0 +1,15 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.fly.particle": {
+      "animation_length": 0.001,
+      "loop": true,
+      "particle_effects": {
+        "0.0": {
+          "effect": "fly_particle",
+          "locator": "particle_origin"
+        }
+      }
+    }
+  }
+}

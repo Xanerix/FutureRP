@@ -1,0 +1,11 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "particles_perspective:particles_base": {
+      "+defines": [
+        "ALPHA_TEST"
+      ],
+      "depthFunc": "Always"
+    }
+  }
+}

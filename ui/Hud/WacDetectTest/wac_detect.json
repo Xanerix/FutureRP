@@ -1,0 +1,50 @@
+{
+  "namespace": "wac",
+  "WAC": {
+    "type": "panel",
+    "size": [
+      "100%c",
+      "100%c"
+    ],
+    "controls": [
+      {
+        "test_im": {
+          "type": "label",
+          "text": "WAC Detected",
+          "color": "red",
+          "layer": 10,
+          "anims": [
+            "@anim_test"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#chat_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "chat_text_grid",
+              "binding_condition": "once"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#text = '')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "anim_test": {
+    "anim_type": "wait",
+    "duration": 1,
+    "next": "@anim_test_1"
+  },
+  "anim_test_1": {
+    "anim_type": "alpha",
+    "easing": "in_cubic",
+    "destroy_at_end": "test_im",
+    "duration": 0.5,
+    "from": 1.0,
+    "to": 0.0
+  }
+}

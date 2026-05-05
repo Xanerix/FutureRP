@@ -1,0 +1,65 @@
+{
+  "format_version": "1.12.0",
+  "animations": {
+    "animation.item2d.offhand": {
+      "loop": true,
+      "bones": {
+        "item2d_0": {
+          "position": [
+            -40,
+            1016,
+            0.0
+          ]
+        }
+      }
+    },
+    "animation.item2d.helmet": {
+      "loop": true,
+      "bones": {
+        "item2d_1": {
+          "position": [
+            "(query.is_item_equipped(1))*16-40",
+            1016,
+            0.0
+          ]
+        }
+      }
+    },
+    "animation.item2d.chestplate": {
+      "loop": true,
+      "bones": {
+        "item2d_2": {
+          "position": [
+            "(query.is_item_equipped(1)+query.has_armor_slot(0))*16-40",
+            1016,
+            0.0
+          ]
+        }
+      }
+    },
+    "animation.item2d.leggings": {
+      "loop": true,
+      "bones": {
+        "item2d_3": {
+          "position": [
+            "(query.is_item_equipped(1)+query.has_armor_slot(0)+query.has_armor_slot(1))*16-40",
+            1016,
+            0.0
+          ]
+        }
+      }
+    },
+    "animation.item2d.boots": {
+      "loop": true,
+      "bones": {
+        "item2d_4": {
+          "position": [
+            "(query.is_item_equipped(1)+query.has_armor_slot(0)+query.has_armor_slot(1)+query.has_armor_slot(2))*16-40",
+            1016,
+            0.0
+          ]
+        }
+      }
+    }
+  }
+}

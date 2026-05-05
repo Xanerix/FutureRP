@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.xc.swap": {
+      "initial_state": "step1",
+      "states": {
+        "step1": {
+          "on_entry": [
+            "v.xc_swap = 0.0;",
+            "v.last_equip = q.get_equipped_item_name;"
+          ],
+          "transitions": [
+            {
+              "step2": "q.get_equipped_item_name != v.last_equip"
+            }
+          ]
+        },
+        "step2": {
+          "on_entry": [
+            "v.xc_swap_time = q.life_time;",
+            "v.xc_swap = 1.0;"
+          ],
+          "transitions": [
+            {
+              "step1": "q.life_time - v.xc_swap_time >= 0.3"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

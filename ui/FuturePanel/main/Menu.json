@@ -1,0 +1,686 @@
+{
+  "namespace": "menu",
+  "Zone0": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [
+      250,
+      "100%c"
+    ],
+    "controls": [
+      {
+        "chat@hud_base.new_toggle_panel": {
+          "$btn": "botton.chat",
+          "$c": "hud_controls.chat_c",
+          "$func": "Chat"
+        }
+      },
+      {
+        "bossbar@hud_base.new_toggle_panel": {
+          "$c": "hud_controls.bossbar_c",
+          "$btn": "botton.bossbar",
+          "$func": "BossBar"
+        }
+      },
+      {
+        "itemtext@hud_base.new_toggle_panel": {
+          "$c": "hud_controls.itemtext_c",
+          "$btn": "botton.itemtext",
+          "$func": "ItemText"
+        }
+      },
+      {
+        "title@hud_base.new_toggle_panel": {
+          "$c": "hud_controls.title_c",
+          "$btn": "botton.title",
+          "$func": "Title"
+        }
+      },
+      {
+        "subtitle@hud_base.new_toggle_panel": {
+          "$c": "hud_controls.subtitle_c",
+          "$btn": "botton.subtitle",
+          "$func": "Subtitle"
+        }
+      },
+      {
+        "tip@hud_base.new_toggle_panel": {
+          "$c": "hud_controls.tip_c",
+          "$btn": "botton.tip",
+          "$func": "Tip"
+        }
+      },
+      {
+        "actionbar@hud_base.new_toggle_panel": {
+          "$c": "hud_controls.actionbar_c",
+          "$btn": "botton.actionbar",
+          "$func": "Actionbar"
+        }
+      },
+      {
+        "scoreboard@hud_base.new_toggle_panel": {
+          "$c": "hud_controls.scoreboard_c",
+          "$btn": "botton.scoreboard",
+          "$func": "Scoreboard"
+        }
+      },
+      {
+        "position@hud_base.new_toggle_panel": {
+          "$c": "hud_controls.position_c",
+          "$btn": "botton.position",
+          "$func": "Position"
+        }
+      },
+      {
+        "Level@hud_base.new_toggle_panel": {
+          "$c": "hud_controls.level_c",
+          "$btn": "botton.level",
+          "$func": "Level"
+        }
+      }
+    ]
+  },
+  "Zone1": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [
+      250,
+      "100%c"
+    ],
+    "controls": [
+      {
+        "armoroffhand@hud_base.new_toggle_panel": {
+          "$btn": "botton.armoroffhand",
+          "$c": "hud_controls.armoroffhand_c",
+          "$func": "ArmorOffhand"
+        }
+      },
+      {
+        "compassclock@hud_base.new_toggle_panel": {
+          "$btn": "botton.compassclock",
+          "$c": "hud_controls.compassclock_c",
+          "$func": "CompassClock"
+        }
+      },
+      {
+        "betterinfo@hud_base.new_toggle_panel": {
+          "$btn": "botton.betterinfo",
+          "$c": "hud_controls.betterinfo_c",
+          "$func": "BetterInfo"
+        }
+      },
+      {
+        "durability@hud_base.new_toggle_panel": {
+          "$btn": "botton.durability",
+          "$c": "hud_controls.durability_c",
+          "$func": "Durability"
+        }
+      },
+      {
+        "handhold@hud_base.new_toggle_panel": {
+          "$btn": "botton.handhold",
+          "$c": "hud_controls.handhold_c",
+          "$func": "HandHold"
+        }
+      },
+      {
+        "hudinv@hud_base.new_toggle_panel": {
+          "$btn": "botton.hudinv",
+          "$c": "hud_controls.hudinv_c",
+          "$func": "HudInventory"
+        }
+      },
+      {
+        "cursor@hud_base.group_toggle_panel_2": {
+          "$btn1": "botton.classic",
+          "$btn2": "botton.dynamic",
+          "$c": "hud_controls.cursor_c",
+          "$function1": "Classic",
+          "$function2": "Dynamic",
+          "$func": "Cross"
+        }
+      }
+    ]
+  },
+  "Zone2": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [
+      250,
+      "100%c"
+    ],
+    "controls": [
+      {
+        "cursor_rgb@hud_base.group_toggle_panel_3": {
+          "$btn1": "botton.cursor1",
+          "$btn2": "botton.cursor2",
+          "$btn3": "botton.cursor3",
+          "$c": "hud_controls.cursor_rgb_c",
+          "$func": "Rgb Dynamic Cursor",
+          "$function1": "None",
+          "$function2": "Aimming",
+          "$function3": "Always"
+        }
+      },
+      {
+        "arraylist_mode@hud_base.group_toggle_panel_2": {
+          "$btn1": "botton.arraylist_base",
+          "$btn2": "botton.arraylist_full",
+          "$c": "hud_controls.arraylist_mode_c",
+          "$function1": "Extra",
+          "$function2": "Full",
+          "$func": "Arraylist Mode"
+        }
+      }
+    ]
+  },
+  "Zone3": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [
+      250,
+      "100%c"
+    ],
+    "controls": [
+      {
+        "arraylist@hud_base.new_toggle_panel": {
+          "$btn": "botton.arraylist",
+          "$c": "hud_controls.arraylist_c",
+          "$func": "ArrayList"
+        }
+      },
+      {
+        "notification@hud_base.new_toggle_panel": {
+          "$btn": "botton.notification",
+          "$c": "hud_controls.notification_c",
+          "$func": "Notification"
+        }
+      },
+      {
+        "wacdetect@hud_base.new_toggle_panel": {
+          "$btn": "botton.wacdetect",
+          "$c": "hud_controls.wacdetect_c",
+          "$func": "WacDetect"
+        }
+      }
+    ]
+  },
+  "Info": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [
+      250,
+      "100%c"
+    ],
+    "layer": 10,
+    "controls": [
+      {
+        "0": {
+          "type": "label",
+          "text": "§eFuture Client§r",
+          "font_type": "$global_font_type",
+          "font_scale_factor": 1.5
+        }
+      },
+      {
+        "1": {
+          "type": "label",
+          "font_type": "$global_font_type",
+          "text": "A Minecraft resource pack.\nYou can drag the icon by holding the arraw.\nRun to the future."
+        }
+      },
+      {
+        "space0": {
+          "type": "panel",
+          "size": [
+            0,
+            10
+          ]
+        }
+      },
+      {
+        "2": {
+          "type": "label",
+          "font_type": "$global_font_type",
+          "text": "§aAuthor§r",
+          "font_scale_factor": 1.4
+        }
+      },
+      {
+        "3": {
+          "type": "label",
+          "font_type": "$global_font_type",
+          "text": "§b§lXanerix§r\n§d§lYousaYousa§r"
+        }
+      },
+      {
+        "space0": {
+          "type": "panel",
+          "size": [
+            0,
+            10
+          ]
+        }
+      },
+      {
+        "4": {
+          "type": "label",
+          "text": "§cThank List§r",
+          "font_type": "$global_font_type",
+          "font_scale_factor": 1.5
+        }
+      },
+      {
+        "5": {
+          "type": "label",
+          "text": "XSzC\nCrosmover\nMintrasperry\nGodStar\nLonel\nxz_seer",
+          "font_type": "$global_font_type"
+        }
+      }
+    ]
+  },
+  "Menu": {
+    "type": "stack_panel",
+    "size": [
+      300,
+      "default"
+    ],
+    "controls": [
+      {
+        "padding1": {
+          "type": "panel",
+          "$btn": "botton.clickguiOn",
+          "size": "@hud_anims.menu_push_in",
+          "animation_reset_name": "$btn",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "ClickGUIOn",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "padding2": {
+          "type": "panel",
+          "$btn": "botton.clickguiOff",
+          "size": "@hud_anims.menu_push_out",
+          "animation_reset_name": "$btn",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "ClickGUIOff",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "0": {
+          "type": "panel",
+          "size": [
+            300,
+            0
+          ],
+          "controls": [
+            {
+              "input": {
+                "type": "input_panel",
+                "size": [
+                  300,
+                  190
+                ],
+                "prevent_touch_input": true,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "ClickGUIOn",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "bg": {
+                      "type": "image",
+                      "texture": "ui/pic/Menu",
+                      "size": [
+                        300,
+                        190
+                      ],
+                      "$btn": "botton.clickguiOn",
+                      "alpha": "@hud_anims.toggle_alpha_on",
+                      "animation_reset_name": "botton.clickguiOn",
+                      "layer": 200
+                    }
+                  },
+                  {
+                    "menu_base": {
+                      "type": "panel",
+                      "size": [
+                        300,
+                        190
+                      ],
+                      "layer": 201,
+                      "controls": [
+                        {
+                          "toggle_stack": {
+                            "type": "stack_panel",
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "offset": [
+                              2.5,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "padding": {
+                                  "type": "panel",
+                                  "size": [
+                                    0,
+                                    2.5
+                                  ]
+                                }
+                              },
+                              {
+                                "0@hud_base.toggle_panel": {
+                                  "$btn": "botton.zone0",
+                                  "$c": "hud_controls.zone_c",
+                                  "$toggle_group_forced_index": 0,
+                                  "$toggle_size": [
+                                    90,
+                                    35
+                                  ],
+                                  "$texture_on": "ui/pic/MenuSelectOn",
+                                  "$texture_off": "ui/pic/MenuSelectOff",
+                                  "$function": "Hud"
+                                }
+                              },
+                              {
+                                "padding": {
+                                  "type": "panel",
+                                  "size": [
+                                    0,
+                                    2.5
+                                  ]
+                                }
+                              },
+                              {
+                                "1@hud_base.toggle_panel": {
+                                  "$btn": "botton.zone1",
+                                  "$c": "hud_controls.zone_c",
+                                  "$toggle_group_forced_index": 1,
+                                  "$toggle_size": [
+                                    90,
+                                    35
+                                  ],
+                                  "$texture_on": "ui/pic/MenuSelectOn",
+                                  "$texture_off": "ui/pic/MenuSelectOff",
+                                  "$function": "Function"
+                                }
+                              },
+                              {
+                                "padding": {
+                                  "type": "panel",
+                                  "size": [
+                                    0,
+                                    2.5
+                                  ]
+                                }
+                              },
+                              {
+                                "2@hud_base.toggle_panel": {
+                                  "$btn": "botton.zone2",
+                                  "$c": "hud_controls.zone_c",
+                                  "$toggle_group_forced_index": 2,
+                                  "$toggle_size": [
+                                    90,
+                                    35
+                                  ],
+                                  "$texture_on": "ui/pic/MenuSelectOn",
+                                  "$texture_off": "ui/pic/MenuSelectOff",
+                                  "$function": "Config"
+                                }
+                              },
+                              {
+                                "padding": {
+                                  "type": "panel",
+                                  "size": [
+                                    0,
+                                    2.5
+                                  ]
+                                }
+                              },
+                              {
+                                "3@hud_base.toggle_panel": {
+                                  "$btn": "botton.zone3",
+                                  "$c": "hud_controls.zone_c",
+                                  "$toggle_group_forced_index": 3,
+                                  "$toggle_size": [
+                                    90,
+                                    35
+                                  ],
+                                  "$texture_on": "ui/pic/MenuSelectOn",
+                                  "$texture_off": "ui/pic/MenuSelectOff",
+                                  "$function": "Misc"
+                                }
+                              },
+                              {
+                                "padding": {
+                                  "type": "panel",
+                                  "size": [
+                                    0,
+                                    2.5
+                                  ]
+                                }
+                              },
+                              {
+                                "4@hud_base.toggle_panel": {
+                                  "$btn": "botton.zone4",
+                                  "$c": "hud_controls.zone_c",
+                                  "$toggle_group_forced_index": 4,
+                                  "$toggle_size": [
+                                    90,
+                                    35
+                                  ],
+                                  "$texture_on": "ui/pic/MenuSelectOn",
+                                  "$texture_off": "ui/pic/MenuSelectOff",
+                                  "$function": "Info"
+                                }
+                              },
+                              {
+                                "padding": {
+                                  "type": "panel",
+                                  "size": [
+                                    0,
+                                    2.5
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "zone0@common.scrolling_panel": {
+                            "$show_background": false,
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "size": [
+                              200,
+                              "100%-5px"
+                            ],
+                            "$scrolling_content": "menu.Zone0",
+                            "offset": [
+                              -3,
+                              2.5
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "Hud",
+                                "source_property_name": "#toggle_state",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "zone1@common.scrolling_panel": {
+                            "$show_background": false,
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "size": [
+                              200,
+                              "100%-5px"
+                            ],
+                            "$scrolling_content": "menu.Zone1",
+                            "offset": [
+                              -3,
+                              2.5
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "Function",
+                                "source_property_name": "#toggle_state",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "zone2@common.scrolling_panel": {
+                            "$show_background": false,
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "size": [
+                              200,
+                              "100%-5px"
+                            ],
+                            "$scrolling_content": "menu.Zone2",
+                            "offset": [
+                              -3,
+                              2.5
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "Config",
+                                "source_property_name": "#toggle_state",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "zone3@common.scrolling_panel": {
+                            "$show_background": false,
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "size": [
+                              200,
+                              "100%-5px"
+                            ],
+                            "$scrolling_content": "menu.Zone3",
+                            "offset": [
+                              -3,
+                              2.5
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "Misc",
+                                "source_property_name": "#toggle_state",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "info@common.scrolling_panel": {
+                            "$show_background": false,
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "size": [
+                              200,
+                              "100%-5px"
+                            ],
+                            "$scrolling_content": "menu.Info",
+                            "offset": [
+                              -3,
+                              2.5
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "Info",
+                                "source_property_name": "#toggle_state",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1": {
+          "type": "panel",
+          "size": [
+            300,
+            0
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "ClickGUIOff",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "_": {
+                "type": "panel",
+                "size": [
+                  300,
+                  190
+                ],
+                "controls": [
+                  {
+                    "bg": {
+                      "type": "image",
+                      "texture": "ui/pic/Menu",
+                      "size": [
+                        300,
+                        190
+                      ],
+                      "$btn": "botton.clickguiOff",
+                      "alpha": "@hud_anims.toggle_alpha_off",
+                      "animation_reset_name": "botton.clickguiOff",
+                      "layer": 99
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

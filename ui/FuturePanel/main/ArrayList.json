@@ -1,0 +1,183 @@
+{
+  "namespace": "arraylist",
+  "ArrayList": {
+    "type": "stack_panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [
+      "100%",
+      "default"
+    ],
+    "offset": [
+      0,
+      -14.5
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "ArrayListOn",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "layer": 32767,
+    "controls": [
+      {
+        "armoroffhand@hud_base.stack_panel_item_base": {
+          "$function": "ArmorOffhand",
+          "$btn": "botton.armoroffhand",
+          "$c": "hud_controls.armoroffhand_c"
+        }
+      },
+      {
+        "compassclock@hud_base.stack_panel_item_base": {
+          "$function": "CompassClock",
+          "$btn": "botton.compassclock",
+          "$c": "hud_controls.compassclock_c"
+        }
+      },
+      {
+        "hudinv@hud_base.stack_panel_item_base": {
+          "$function": "HudInventory",
+          "$btn": "botton.hudinv",
+          "$c": "hud_controls.hudinv_c"
+        }
+      },
+      {
+        "scoreboard@hud_base.stack_panel_item_base": {
+          "$is_basic": true,
+          "$function": "Scoreboard",
+          "$btn": "botton.scoreboard",
+          "$c": "hud_controls.scoreboard_c"
+        }
+      },
+      {
+        "notification@hud_base.stack_panel_item_base": {
+          "$function": "Notification",
+          "$btn": "botton.notification",
+          "$c": "hud_controls.notification_c"
+        }
+      },
+      {
+        "betterinfo@hud_base.stack_panel_item_base": {
+          "$function": "BetterInfo",
+          "$btn": "botton.betterinfo",
+          "$c": "hud_controls.betterinfo_c"
+        }
+      },
+      {
+        "wacdetect@hud_base.stack_panel_item_base": {
+          "$function": "WacDetect",
+          "$btn": "botton.wacdetect",
+          "$c": "hud_controls.wacdetect_c"
+        }
+      },
+      {
+        "actionbar@hud_base.stack_panel_item_base": {
+          "$is_basic": true,
+          "$function": "Actionbar",
+          "$btn": "botton.actionbar",
+          "$c": "hud_controls.actionbar_c"
+        }
+      },
+      {
+        "durability@hud_base.stack_panel_item_base": {
+          "$function": "Durability",
+          "$btn": "botton.durability",
+          "$c": "hud_controls.durability_c"
+        }
+      },
+      {
+        "handhold@hud_base.stack_panel_item_base": {
+          "$function": "HandHold",
+          "$btn": "botton.handhold",
+          "$c": "hud_controls.handhold_c"
+        }
+      },
+      {
+        "bossbar@hud_base.stack_panel_item_base": {
+          "$is_basic": true,
+          "$function": "BossBar",
+          "$btn": "botton.bossbar",
+          "$c": "hud_controls.bossbar_c"
+        }
+      },
+      {
+        "itemtext@hud_base.stack_panel_item_base": {
+          "$is_basic": true,
+          "$function": "ItemText",
+          "$btn": "botton.itemtext",
+          "$c": "hud_controls.itemtext_c"
+        }
+      },
+      {
+        "position@hud_base.stack_panel_item_base": {
+          "$is_basic": true,
+          "$function": "Position",
+          "$btn": "botton.position",
+          "$c": "hud_controls.position_c"
+        }
+      },
+      {
+        "clickgui@hud_base.stack_panel_item_base": {
+          "$function": "ClickGUI",
+          "$btn": "botton.clickgui",
+          "$c": "hud_controls.clickgui_c"
+        }
+      },
+      {
+        "subtitle@hud_base.stack_panel_item_base": {
+          "$is_basic": true,
+          "$function": "Subtitle",
+          "$btn": "botton.subtitle",
+          "$c": "hud_controls.subtitle_c"
+        }
+      },
+      {
+        "cursor@hud_base.stack_panel_item_base": {
+          "$function": "Cross",
+          "$function1": "Classic",
+          "$function2": "Dynamic",
+          "$function_layout": "Cross",
+          "$btn": "",
+          "$btn1": "botton.classic",
+          "$btn2": "botton.dynamic",
+          "$c": "hud_controls.cursor_c"
+        }
+      },
+      {
+        "level@hud_base.stack_panel_item_base": {
+          "$is_basic": true,
+          "$function": "Level",
+          "$btn": "botton.level",
+          "$c": "hud_controls.level_c"
+        }
+      },
+      {
+        "chat@hud_base.stack_panel_item_base": {
+          "$is_basic": true,
+          "$function": "Chat",
+          "$function_layout": "Chat",
+          "$btn": "botton.chat",
+          "$c": "hud_controls.chat_c"
+        }
+      },
+      {
+        "title@hud_base.stack_panel_item_base": {
+          "$is_basic": true,
+          "$function": "Title",
+          "$btn": "botton.title",
+          "$c": "hud_controls.title_c"
+        }
+      },
+      {
+        "tip@hud_base.stack_panel_item_base": {
+          "$is_basic": true,
+          "$function": "Tip",
+          "$btn": "botton.tip",
+          "$c": "hud_controls.tip_c"
+        }
+      }
+    ]
+  }
+}

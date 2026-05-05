@@ -1,0 +1,694 @@
+{
+  "namespace": "hud_base",
+  "new_toggle_panel": {
+    "type": "panel",
+    "size": [
+      "100%c",
+      "100%c+2px"
+    ],
+    "$func": "",
+    "$function1|default": "($func+'Off')",
+    "$function2|default": "($func+'On')",
+    "$btn|default": "",
+    "$btn1|default": "($btn+'Off')",
+    "$btn2|default": "($btn+'On')",
+    "$on|default": "hud_base.toggle_on",
+    "$off|default": "hud_base.toggle_off",
+    "$size": [
+      200,
+      20
+    ],
+    "controls": [
+      {
+        "0": {
+          "type": "panel",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": "$size",
+          "controls": [
+            {
+              "t@hud_base.toggle_panel": {
+                "$toggle_size": "$size",
+                "$toggle_on": "$off",
+                "$toggle_off": "$on",
+                "$toggle_on_hover": "$off",
+                "$toggle_off_hover": "$on",
+                "$btn": "$btn1",
+                "$toggle_group_forced_index": 0,
+                "$function": "$function1",
+                "$function_layout": "$func"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$function2",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "1": {
+          "type": "panel",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": "$size",
+          "controls": [
+            {
+              "t@hud_base.toggle_panel": {
+                "$toggle_size": "$size",
+                "$toggle_on": "$on",
+                "$toggle_off": "$off",
+                "$toggle_on_hover": "$on",
+                "$toggle_off_hover": "$off",
+                "$btn": "$btn2",
+                "$toggle_group_forced_index": 1,
+                "$function": "$function2",
+                "$function_layout": "$func"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$function1",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "group_toggle_panel_2": {
+    "$c": "",
+    "type": "stack_panel",
+    "size": [
+      200,
+      30
+    ],
+    "$size|default": [
+      100,
+      20
+    ],
+    "controls": [
+      {
+        "l": {
+          "type": "label",
+          "text": "$func",
+          "font_type": "$global_font_type"
+        }
+      },
+      {
+        "space": {
+          "type": "panel",
+          "size": [
+            0,
+            2
+          ]
+        }
+      },
+      {
+        "stack": {
+          "type": "panel",
+          "size": [
+            200,
+            20
+          ],
+          "controls": [
+            {
+              "input_0": {
+                "type": "input_panel",
+                "size": [
+                  100,
+                  20
+                ],
+                "prevent_touch_input": true,
+                "layer": 999,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$function1",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "0": {
+                "type": "panel",
+                "size": [
+                  100,
+                  20
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                  {
+                    "t@hud_base.toggle_panel": {
+                      "$toggle_size": "$size",
+                      "$btn": "$btn1",
+                      "$toggle_group_forced_index": 0,
+                      "$texture_on": "ui/pic/2GroupToggle",
+                      "$texture_off": "ui/pic/2GroupToggleLeft",
+                      "$function": "$function1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "input_1": {
+                "type": "input_panel",
+                "size": [
+                  100,
+                  20
+                ],
+                "prevent_touch_input": true,
+                "layer": 999,
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$function2",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "1": {
+                "type": "panel",
+                "size": [
+                  100,
+                  20
+                ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "controls": [
+                  {
+                    "t@hud_base.toggle_panel": {
+                      "$toggle_size": "$size",
+                      "$btn": "$btn2",
+                      "$toggle_group_forced_index": 1,
+                      "$texture_on": "ui/pic/2GroupToggle",
+                      "$texture_off": "ui/pic/2GroupToggleRight",
+                      "$function": "$function2"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "group_toggle_panel_3": {
+    "$c": "",
+    "type": "stack_panel",
+    "size": [
+      200,
+      30
+    ],
+    "$size|default": [
+      66.6,
+      20
+    ],
+    "controls": [
+      {
+        "l": {
+          "type": "label",
+          "font_type": "$global_font_type",
+          "text": "$func"
+        }
+      },
+      {
+        "space": {
+          "type": "panel",
+          "size": [
+            0,
+            2
+          ]
+        }
+      },
+      {
+        "stack": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "0": {
+                "type": "panel",
+                "size": "$size",
+                "controls": [
+                  {
+                    "t@hud_base.toggle_panel": {
+                      "$toggle_size": "$size",
+                      "$btn": "$btn1",
+                      "$toggle_group_forced_index": 0,
+                      "$texture_on": "ui/pic/3GroupToggle",
+                      "$texture_off": "ui/pic/3GroupToggleLeft",
+                      "$function": "$function1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "1": {
+                "type": "panel",
+                "size": "$size",
+                "controls": [
+                  {
+                    "t@hud_base.toggle_panel": {
+                      "$toggle_size": "$size",
+                      "$btn": "$btn2",
+                      "$toggle_group_forced_index": 1,
+                      "$texture_on": "ui/pic/3GroupToggle",
+                      "$texture_off": "textures/ui/Black",
+                      "$function": "$function2"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "2": {
+                "type": "panel",
+                "size": "$size",
+                "controls": [
+                  {
+                    "t@hud_base.toggle_panel": {
+                      "$toggle_size": "$size",
+                      "$btn": "$btn3",
+                      "$toggle_group_forced_index": 2,
+                      "$texture_on": "ui/pic/3GroupToggle",
+                      "$texture_off": "ui/pic/3GroupToggleRight",
+                      "$function": "$function3"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "toggle_panel@config.base": {
+    "$texture_off|default": "ui/pic/ToggleOff",
+    "$texture_on|default": "ui/pic/ToggleOn",
+    "$toggle_on|default": "hud_base.toggle_on",
+    "$toggle_off|default": "hud_base.toggle_off",
+    "$toggle_on_hover|default": "hud_base.toggle_on",
+    "$toggle_off_hover|default": "hud_base.toggle_off",
+    "$c|default": "hud_base.toggle_control_base",
+    "$function|default": "function",
+    "$function_layout|default": "$function",
+    "$reversed|default": false,
+    "$show_label|default": true,
+    "$toggle_size|default": [
+      200,
+      20
+    ],
+    "size": "$toggle_size",
+    "controls": [
+      {
+        "l": {
+          "alpha": "@hud_anims.menu_text_open",
+          "animation_reset_name": "botton.clickguiOn",
+          "ignored": "(not $show_label)",
+          "type": "label",
+          "font_type": "$global_font_type",
+          "enable_profanity_filter": false,
+          "text": "$function_layout",
+          "font_scale_factor": 1.0,
+          "layer": 102
+        }
+      },
+      {
+        "$function@$c": {}
+      }
+    ]
+  },
+  "toggle_control_base@common.toggle": {
+    "$toggle_default_state": "$reversed",
+    "size": "$toggle_size",
+    "$group|default": true,
+    "$ignore_anim|default": false,
+    "$radio_toggle_group": "$group",
+    "$toggle_name": "$function",
+    "$toggle_state_binding_name": "('#'+$toggle_name)",
+    "$btn|default": "",
+    "$unchecked_control": "$toggle_off",
+    "$checked_control": "$toggle_on",
+    "$unchecked_hover_control": "$toggle_off_hover",
+    "$checked_hover_control": "$toggle_on_hover",
+    "$unchecked_locked_control": "$toggle_off_hover",
+    "$unchecked_locked_hover_control": "$toggle_off_hover",
+    "$checked_locked_control": "$toggle_on_hover",
+    "$checked_locked_hover_control": "$toggle_on_hover",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$btn",
+        "mapping_type": "pressed",
+        "consume_event": false
+      }
+    ]
+  },
+  "toggle_on": {
+    "type": "panel",
+    "size": "$toggle_size",
+    "controls": [
+      {
+        "bg": {
+          "ignored": "$ignore_anim",
+          "type": "image",
+          "texture": "$texture_on",
+          "alpha": "@hud_anims.toggle_alpha_on",
+          "animation_reset_name": "$btn",
+          "size": "$toggle_size",
+          "layer": 101,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "ClickGUI",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "bg2": {
+          "type": "image",
+          "alpha": "@hud_anims.toggle_alpha_on",
+          "animation_reset_name": "botton.clickgui",
+          "texture": "$texture_off",
+          "size": "$toggle_size",
+          "layer": 100
+        }
+      },
+      {
+        "bg_no_anim": {
+          "ignored": "(not $ignore_anim)",
+          "alpha": 0.5,
+          "type": "image",
+          "texture": "$texture_on",
+          "size": "$toggle_size"
+        }
+      }
+    ]
+  },
+  "toggle_off": {
+    "type": "panel",
+    "size": "$toggle_size",
+    "controls": [
+      {
+        "bg": {
+          "ignored": "$ignore_anim",
+          "type": "image",
+          "texture": "$texture_on",
+          "alpha": "@hud_anims.toggle_alpha_off",
+          "animation_reset_name": "$btn",
+          "size": "$toggle_size",
+          "layer": 101,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "ClickGUI",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "bg2": {
+          "type": "image",
+          "alpha": "@hud_anims.toggle_alpha_on",
+          "animation_reset_name": "botton.clickgui",
+          "texture": "$texture_off",
+          "size": "$toggle_size",
+          "layer": 100
+        }
+      }
+    ]
+  },
+  "progress_item_base": {
+    "$function|default": "",
+    "$btn|default": "",
+    "$function1|default": "($function+'On')",
+    "$function_layout|default": "$function",
+    "$sub_function|default": "($function+' On')",
+    "$btn1|default": "($btn+'On')",
+    "$c|dafault": "hud.toggle_control_base",
+    "type": "panel",
+    "size": "@hud_anims.progress_space_small_start",
+    "animation_reset_name": "$btn1",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$function1",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "0": {
+          "type": "image",
+          "texture": "ui/pic/Progress",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "alpha": 0.8,
+          "layer": 0,
+          "size": [
+            100,
+            30
+          ],
+          "offset": "@hud_anims.progress_offset_in",
+          "animation_reset_name": "$btn1",
+          "controls": [
+            {
+              "title": {
+                "type": "label",
+                "enable_profanity_filter": false,
+                "font_type": "default",
+                "text": "$function_layout",
+                "layer": 1,
+                "font_scale_factor": 1.4,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  2,
+                  2
+                ]
+              }
+            },
+            {
+              "subtitle": {
+                "type": "label",
+                "text": "$sub_function",
+                "font_type": "default",
+                "layer": 1,
+                "font_scale_factor": 1.0,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  2,
+                  14
+                ]
+              }
+            },
+            {
+              "progress": {
+                "type": "image",
+                "texture": "textures/ui/White",
+                "$rgb_duration": 0.02,
+                "color": "@rgb.C_01",
+                "size": "@hud_anims.progress_duration_size",
+                "offset": [
+                  5,
+                  -1
+                ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "layer": 1,
+                "animation_reset_name": "$btn1"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "stack_panel_item_base": {
+    "$function|default": "",
+    "$function_layout|default": "$function",
+    "$alpha|default": 0.6,
+    "$btn|default": "",
+    "$c|dafault": "",
+    "$function1|default": "($function+'Off')",
+    "$function2|default": "($function+'On')",
+    "$btn1|default": "($btn+'Off')",
+    "$btn2|default": "($btn+'On')",
+    "$is_basic|default": false,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "type": "stack_panel",
+    "size": [
+      "100%",
+      "default"
+    ],
+    "bindings": [
+      {
+        "ignored": "(not $is_basic)",
+        "binding_type": "view",
+        "source_control_name": "Full",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "off": {
+          "type": "panel",
+          "size": "@hud_anims.stack_panel_item_size_off",
+          "animation_reset_name": "$btn1",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$function1",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "on": {
+          "type": "panel",
+          "size": "@hud_anims.stack_panel_item_size_on",
+          "animation_reset_name": "$btn2",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$function2",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "content": {
+          "type": "panel",
+          "size": [
+            "100%",
+            0
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$function2",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "_": {
+                "type": "panel",
+                "size": [
+                  "100%c",
+                  14.5
+                ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "controls": [
+                  {
+                    "0": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "offset": "@hud_anims.stack_offset_in",
+                      "animation_reset_name": "$btn2",
+                      "size": [
+                        "100%c",
+                        14.5
+                      ],
+                      "controls": [
+                        {
+                          "left_round": {
+                            "type": "image",
+                            "texture": "ui/pic/ArrayListLeft",
+                            "layer": 0,
+                            "size": [
+                              2,
+                              14.5
+                            ],
+                            "alpha": "$alpha"
+                          }
+                        },
+                        {
+                          "middle": {
+                            "type": "image",
+                            "texture": "textures/ui/Black",
+                            "layer": 0,
+                            "size": [
+                              "100%c",
+                              14.5
+                            ],
+                            "controls": [
+                              {
+                                "label": {
+                                  "type": "label",
+                                  "anchor_from": "right_middle",
+                                  "anchor_to": "right_middle",
+                                  "text_alignment": "right",
+                                  "enable_profanity_filter": false,
+                                  "font_type": "$arraylist_font_type",
+                                  "text": "$function_layout",
+                                  "layer": 1,
+                                  "font_scale_factor": 1.0
+                                }
+                              }
+                            ],
+                            "alpha": "$alpha"
+                          }
+                        },
+                        {
+                          "right_round": {
+                            "type": "image",
+                            "texture": "textures/ui/White",
+                            "color": "@rgb.C_01",
+                            "layer": 0,
+                            "size": [
+                              2,
+                              14.5
+                            ],
+                            "alpha": "$alpha"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

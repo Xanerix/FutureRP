@@ -1,0 +1,62 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.health_bar": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "on_entry": [
+            "v.health_base = q.health;",
+            "v.health_max = q.max_health;",
+            "v.health_delta = 0;"
+          ],
+          "transitions": [
+            {
+              "setup": "v.health_last = query.health; return 1;"
+            }
+          ]
+        },
+        "setup": {
+          "on_entry": [
+            "v.health_base = q.health;"
+          ],
+          "transitions": [
+            {
+              "default": "!q.is_alive"
+            },
+            {
+              "do": "v.health_last!=q.health"
+            }
+          ]
+        },
+        "do": {
+          "on_entry": [
+            "v.health_time = q.life_time;",
+            "v.health_delta = q.health-v.health_last;"
+          ],
+          "animations": [
+            "health_bar_anim"
+          ],
+          "transitions": [
+            {
+              "default": "!q.is_alive || q.max_health!=v.health_max"
+            },
+            {
+              "set": "q.life_time-v.health_time>=0.2f"
+            }
+          ]
+        },
+        "set": {
+          "on_entry": [
+            "v.health_base = q.health;"
+          ],
+          "transitions": [
+            {
+              "default": "1.0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

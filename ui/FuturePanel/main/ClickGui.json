@@ -1,0 +1,81 @@
+{
+  "namespace": "clickgui",
+  "ClickGui": {
+    "type": "input_panel",
+    "draggable": "both",
+    "prevent_touch_input": true,
+    "size": [
+      54,
+      16
+    ],
+    "layer": 32767,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [
+      10,
+      0
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      }
+    ],
+    "controls": [
+      {
+        "toggle@hud_base.new_toggle_panel": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$btn": "botton.clickgui",
+          "$show_label": false,
+          "$on": "clickgui.menu_toggle_on",
+          "$off": "clickgui.menu_toggle_off",
+          "$func": "ClickGUI",
+          "$c": "hud_controls.clickgui_c",
+          "$size": [
+            38,
+            16
+          ]
+        }
+      },
+      {
+        "drag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "type": "image",
+          "alpha": "@hud_anims.clickgui_alpha",
+          "animation_reset_name": "botton.clickguiOn",
+          "texture": "ui/pic/Drag",
+          "size": [
+            16,
+            16
+          ],
+          "offset": [
+            39,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "menu_toggle_on": {
+    "type": "image",
+    "texture": "textures/ui/hud_tip_text_background",
+    "size": [
+      38,
+      16
+    ],
+    "alpha": 0.5,
+    "controls": [
+      {
+        "l": {
+          "type": "label",
+          "text": "Future",
+          "layer": 1
+        }
+      }
+    ]
+  },
+  "menu_toggle_off@menu_toggle_on": {}
+}

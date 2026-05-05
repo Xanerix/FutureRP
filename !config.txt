@@ -1,0 +1,60 @@
+{"namespace": "config","base": {"type": "panel",
+//////////////////////////////////////////
+"$armoroffhand": 1,
+"$compassclock": 1,
+"$cursor": 1,
+"$cursor_rgb": 1,
+"$chat": 1,
+"$hudinv": 0,
+"$itemtext": 1,
+"$title": 1,
+"$subtitle": 1,
+"$actionbar": 1,
+"$scoreboard": 1,
+"$tip": 1,
+"$notification": 0,
+"$arraylist": 0,
+"$bossbar": 1,
+"$betterinfo": 1,
+"$wacdetect": 1,
+"$durability": 1,
+"$handhold": 1,
+"$position": 1,
+"$level": 1,
+"$arraylist_mode": 0
+//////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}}

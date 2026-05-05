@@ -1,0 +1,30 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Made by Xanerix",
+    "name": "Future Pack",
+    "uuid": "e089ea12-7d04-4986-bd98-e51a738c9987",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      18,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "description": "Made by Xanerix",
+      "type": "resources",
+      "uuid": "cb4ec4ca-2198-4e2f-8b54-f4fa50707bf8",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

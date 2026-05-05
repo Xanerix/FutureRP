@@ -1,0 +1,176 @@
+{
+  "namespace": "cursor",
+  "Cursor": {
+    "type": "panel",
+    "size": [
+      16,
+      16
+    ],
+    "bindings": [
+      {
+        "binding_name": "#split_controls",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ],
+    "controls": [
+      {
+        "cursor0": {
+          "type": "custom",
+          "size": [
+            16,
+            16
+          ],
+          "renderer": "cursor_renderer",
+          "layer": 20,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "Classic",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "cursor1": {
+          "type": "panel",
+          "offset": [
+            0,
+            -24
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "Dynamic",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "Cross0": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "None",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "_": {
+                      "renderer": "live_player_renderer",
+                      "layer": 20,
+                      "size": [
+                        16,
+                        16
+                      ],
+                      "type": "custom",
+                      "offset": [
+                        0,
+                        2000
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Cross1": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "Aimming",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "_": {
+                      "renderer": "live_player_renderer",
+                      "layer": 20,
+                      "size": [
+                        16,
+                        16
+                      ],
+                      "type": "custom",
+                      "offset": [
+                        0,
+                        2000
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "(not #interact_visible)",
+                          "binding_name_override": "#visible",
+                          "binding_condition": "always"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "__": {
+                      "renderer": "live_player_renderer",
+                      "layer": 21,
+                      "size": [
+                        16,
+                        16
+                      ],
+                      "type": "custom",
+                      "offset": [
+                        0,
+                        3000
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "#interact_visible",
+                          "binding_name_override": "#visible",
+                          "binding_condition": "always"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Cross2": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "Always",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "_": {
+                      "renderer": "live_player_renderer",
+                      "layer": 22,
+                      "size": [
+                        16,
+                        16
+                      ],
+                      "type": "custom",
+                      "offset": [
+                        0,
+                        3000
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

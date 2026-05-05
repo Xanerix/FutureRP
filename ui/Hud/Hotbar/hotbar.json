@@ -1,0 +1,397 @@
+{
+	"namespace": "hotbar",
+	"hide_hud_button": {
+		"type": "image",
+		"texture": "textures/ui/Black",
+		"alpha": 0.0,
+		"size": [
+			20,
+			20
+		],
+		"layer": 31,
+		"controls": [
+			{
+				"button@hotbar_base.text_button": {
+					"layer": 10,
+					"$pressed_button_name": "button.hide_gui_all",
+					"button_mappings": [
+						{
+							"from_button_id": "button.menu_select",
+							"to_button_id": "$pressed_button_name",
+							"mapping_type": "pressed"
+						}
+					],
+					"bindings": [
+						{
+							"binding_name": "#inventory_touch_button",
+							"binding_name_override": "#visible",
+							"binding_type": "global"
+						}
+					],
+					"$button_text": "H"
+				}
+			}
+		]
+	},
+	"Hotbar": {
+		"type": "stack_panel",
+		"anchor_from": "bottom_middle",
+		"anchor_to": "bottom_middle",
+		"size": [
+			220,
+			"default"
+		],
+		"controls": [
+			{
+				"WacDetectTest": {
+					"type": "panel",
+					"size": [
+						220,
+						10
+					],
+					"factory": {
+						"name": "chat_item_factory",
+						"control_name": "@wac.WAC"
+					},
+					"bindings": [
+						{
+							"binding_type": "view",
+							"source_control_name": "WacDetectOn",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"HoldCounter": {
+					"type": "panel",
+					"size": [
+						"100%",
+						"100%cm"
+					],
+					"controls": [
+						{
+							"HandHold@handhold.HandHold": {}
+						}
+					]
+				}
+			},
+			{
+				"it": {
+					"type": "panel",
+					"size": [
+						220,
+						20
+					],
+					"controls": [
+						{
+							"ItemText": {
+								"type": "panel",
+								"bindings": [
+									{
+										"binding_name": "#item_text",
+										"binding_name_override": "#text"
+									},
+									{
+										"binding_type": "view",
+										"source_property_name": "(not (#text = ''))",
+										"target_property_name": "#visible"
+									}
+								],
+								"controls": [
+									{
+										"item_text_factory": {
+											"type": "factory",
+											"control_ids": {
+												"item_text": "@item_text.ItemText",
+												"jukebox_text": "@item_text.JukeboxText"
+											}
+										}
+									}
+								]
+							}
+						}
+					],
+					"bindings": [
+						{
+							"binding_type": "view",
+							"source_control_name": "ItemTextOn",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"cha": {
+					"type": "panel",
+					"size": [
+						220,
+						50
+					],
+					"controls": [
+						{
+							"ClassicInfo@better_ha.Classic": {}
+						}
+					],
+					"bindings": [
+						{
+							"binding_type": "view",
+							"source_control_name": "BetterInfoOff",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"bha": {
+					"type": "panel",
+					"size": [
+						220,
+						11.5
+					],
+					"controls": [
+						{
+							"HealthArmor@better_ha.HealthArmor": {}
+						}
+					],
+					"bindings": [
+						{
+							"binding_type": "view",
+							"source_control_name": "BetterInfoOn",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"xp": {
+					"type": "panel",
+					"size": [
+						220,
+						3
+					],
+					"controls": [
+						{
+							"empty_exp_bar": {
+								"type": "image",
+								"texture": "ui/pic/XpBar",
+								"size": [
+									180,
+									3
+								],
+								"alpha": 0.45,
+								"color": "black",
+								"layer": 0,
+								"controls": [
+									{
+										"full_exp_bar": {
+											"type": "panel",
+											"anchor_from": "top_middle",
+											"anchor_to": "top_middle",
+											"size": [
+												180,
+												1.5
+											],
+											"clips_children": true,
+											"controls": [
+												{
+													"_": {
+														"type": "image",
+														"texture": "ui/pic/XpBar",
+														"size": [
+															180,
+															3
+														],
+														"clip_direction": "left",
+														"clip_pixelperfect": false,
+														"layer": 1,
+														"alpha": 0.45,
+														"bindings": [
+															{
+																"binding_name": "#exp_progress",
+																"binding_name_override": "#clip_ratio",
+																"binding_type": "global"
+															}
+														]
+													}
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"hotbar_no_input": {
+					"type": "stack_panel",
+					"orientation": "horizontal",
+					"size": [
+						220,
+						23
+					],
+					"controls": [
+						{
+							"hide_hud_button@hide_hud_button": {}
+						},
+						{
+							"disable_input": {
+								"type": "input_panel",
+								"size": [
+									180,
+									20
+								],
+								"prevent_touch_input": true,
+								"controls": [
+									{
+										"hotbar_grid": {
+											"type": "grid",
+											"$hotbar_collection_name|default": "hotbar_items",
+											"grid_item_template": "hotbar_base.gui_hotbar_grid_item",
+											"grid_dimension_binding": "#hotbar_grid_dimensions",
+											"collection_name": "$hotbar_collection_name",
+											"bindings": [
+												{
+													"binding_name": "#hotbar_grid_dimensions",
+													"binding_type": "global"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"inventory_button": {
+								"type": "panel",
+								"size": [
+									20,
+									20
+								],
+								"controls": [
+									{
+										"button@hotbar_base.text_button": {
+											"$pressed_button_name": "button.hotbar_inventory_button",
+											"button_mappings": [
+												{
+													"from_button_id": "button.menu_select",
+													"to_button_id": "$pressed_button_name",
+													"mapping_type": "pressed"
+												}
+											],
+											"bindings": [
+												{
+													"binding_name": "#inventory_touch_button",
+													"binding_name_override": "#visible",
+													"binding_type": "global"
+												}
+											],
+											"$button_text": "E"
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"info": {
+					"type": "panel",
+					"size": [
+						220,
+						2
+					],
+					"controls": [
+						{
+							"_": {
+								"type": "stack_panel",
+								"orientation": "horizontal",
+								"offset": [
+									0,
+									-3.5
+								],
+								"controls": [
+									{
+										"level": {
+											"type": "label",
+											"font_type": "$global_font_type",
+											"text": "#text",
+											"font_scale_factor": 0.6,
+											"bindings": [
+												{
+													"binding_name": "#level_number",
+													"binding_type": "global"
+												},
+												{
+													"binding_type": "view",
+													"source_property_name": "('§2Level: ' + #level_number + '  ')",
+													"target_property_name": "#text"
+												},
+												{
+													"binding_type": "view",
+													"source_control_name": "LevelOn",
+													"source_property_name": "#toggle_state",
+													"target_property_name": "#visible"
+												}
+											]
+										}
+									},
+									{
+										"position": {
+											"type": "label",
+											"font_type": "$global_font_type",
+											"text": "#text",
+											"font_scale_factor": 0.6,
+											"bindings": [
+												{
+													"binding_name": "#player_position_text",
+													"binding_condition": "always",
+													"binding_type": "global"
+												},
+												{
+													"binding_type": "view",
+													"source_property_name": "('§7Position: ' + #player_position_text -'位置：' + '  ')",
+													"target_property_name": "#text"
+												},
+												{
+													"binding_type": "view",
+													"source_control_name": "PositionOn",
+													"source_property_name": "#toggle_state",
+													"target_property_name": "#visible"
+												}
+											]
+										}
+									},
+									{
+										"Durability@durability.Durability": {
+											"size": [
+												"100%c",
+												"100%sm"
+											],
+											"$color": "yellow",
+											"bindings": [
+												{
+													"binding_type": "view",
+													"source_control_name": "DurabilityOn",
+													"source_property_name": "#toggle_state",
+													"target_property_name": "#visible"
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}

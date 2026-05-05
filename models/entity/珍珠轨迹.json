@@ -1,0 +1,24 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.lonel_v_pearl",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 2, 0]
+			},
+			"bones": [
+				{
+					"name": "lonel_v_pearl",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"lonel_v_pearl_lt": [0, 24, 0]
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,40 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.player.first_person.attack_rotation_xc": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"position": [
+						0,//"math.sin(math.pow(v.attack_time, 0.5) * 180) * -10.0 * (q.main_hand_item_use_duration <= 0.0f)",
+						0,//"((math.sin(math.pow(v.attack_time, 0.5) * 360) * 5.25) + (math.sin(math.pow(v.attack_time, 0.5) * 180) * 6.25)) * (q.main_hand_item_use_duration <= 0.0f ? 1.0 : 0.6)",
+						"math.sin(math.pow(v.attack_time, 1.0) * 180) * 5.0 * (q.main_hand_item_use_duration <= 0.0f)"
+					],
+					"rotation": [
+						"math.sin(math.pow(v.attack_time, 0.5) * 180) * -60.0",
+						"math.sin(math.pow(1 - v.attack_time, 2.5) * 180) * -30.0",
+						"math.sin(math.pow(v.attack_time, 0.5) * 180) * -30.0"
+					]
+				}
+			}
+		},
+		"animation.xc.wield": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"position": [
+						"c.is_first_person ? 21.0 : 0",
+						"c.is_first_person ? 8.5 : -11.5",
+						"c.is_first_person ? 25.5 : -8.75"
+					],
+					"rotation": [
+						"c.is_first_person ? 108.0 : 11",
+						"c.is_first_person ? -4.5 : -178.0",
+						0
+					],
+					"scale": 1.0
+				}
+			}
+		}
+	}
+}

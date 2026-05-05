@@ -1,0 +1,99 @@
+{
+  "namespace": "hud_controls",
+  "zone_c@hud_base.toggle_control_base": {
+    "$toggle_name": "zone",
+    "$ignore_anim": true
+  },
+  "clickgui_c@hud_base.toggle_control_base": {
+    "$toggle_name": "clickgui",
+    "$ignore_anim": true
+  },
+  "armoroffhand_c@hud_base.toggle_control_base": {
+    "$toggle_name": "armoroffhand",
+    "$toggle_group_default_selected": "$armoroffhand"
+  },
+  "compassclock_c@hud_base.toggle_control_base": {
+    "$toggle_name": "compassclock",
+    "$toggle_group_default_selected": "$compassclock"
+  },
+  "cursor_c@hud_base.toggle_control_base": {
+    "$toggle_name": "cursor",
+    "$toggle_group_default_selected": "$cursor"
+  },
+  "cursor_rgb_c@hud_base.toggle_control_base": {
+    "$toggle_name": "cursor_rgb",
+    "$toggle_group_default_selected": "$cursor_rgb"
+  },
+  "chat_c@hud_base.toggle_control_base": {
+    "$toggle_name": "chat",
+    "$toggle_group_default_selected": "$chat"
+  },
+  "hudinv_c@hud_base.toggle_control_base": {
+    "$toggle_name": "hudinv",
+    "$toggle_group_default_selected": "$hudinv"
+  },
+  "itemtext_c@hud_base.toggle_control_base": {
+    "$toggle_name": "itemtext",
+    "$toggle_group_default_selected": "$itemtext"
+  },
+  "title_c@hud_base.toggle_control_base": {
+    "$toggle_name": "title",
+    "$toggle_group_default_selected": "$title"
+  },
+  "subtitle_c@hud_base.toggle_control_base": {
+    "$toggle_name": "subtitle",
+    "$toggle_group_default_selected": "$subtitle"
+  },
+  "actionbar_c@hud_base.toggle_control_base": {
+    "$toggle_name": "actionbar",
+    "$toggle_group_default_selected": "$actionbar"
+  },
+  "scoreboard_c@hud_base.toggle_control_base": {
+    "$toggle_name": "scoreboard",
+    "$toggle_group_default_selected": "$scoreboard"
+  },
+  "tip_c@hud_base.toggle_control_base": {
+    "$toggle_name": "tip",
+    "$toggle_group_default_selected": "$tip"
+  },
+  "notification_c@hud_base.toggle_control_base": {
+    "$toggle_name": "notification",
+    "$toggle_group_default_selected": "$notification"
+  },
+  "arraylist_c@hud_base.toggle_control_base": {
+    "$toggle_name": "arraylist",
+    "$toggle_group_default_selected": "$arraylist"
+  },
+  "bossbar_c@hud_base.toggle_control_base": {
+    "$toggle_name": "bossbar",
+    "$toggle_group_default_selected": "$bossbar"
+  },
+  "betterinfo_c@hud_base.toggle_control_base": {
+    "$toggle_name": "betterinfo",
+    "$toggle_group_default_selected": "$betterinfo"
+  },
+  "wacdetect_c@hud_base.toggle_control_base": {
+    "$toggle_name": "wacdetect",
+    "$toggle_group_default_selected": "$wacdetect"
+  },
+  "durability_c@hud_base.toggle_control_base": {
+    "$toggle_name": "durability",
+    "$toggle_group_default_selected": "$durability"
+  },
+  "handhold_c@hud_base.toggle_control_base": {
+    "$toggle_name": "handhold",
+    "$toggle_group_default_selected": "$handhold"
+  },
+  "position_c@hud_base.toggle_control_base": {
+    "$toggle_name": "position",
+    "$toggle_group_default_selected": "$position"
+  },
+  "level_c@hud_base.toggle_control_base": {
+    "$toggle_name": "level",
+    "$toggle_group_default_selected": "$level"
+  },
+  "arraylist_mode_c@hud_base.toggle_control_base": {
+    "$toggle_name": "arraylist_mode",
+    "$toggle_group_default_selected": "$arraylist_mode"
+  }
+}

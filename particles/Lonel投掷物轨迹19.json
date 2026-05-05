@@ -1,0 +1,51 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "lonelyang:lonel_v_pearl_lz_19",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "particles/textures/lonel_v_pearl_lz"
+			}
+		},
+		"components": {
+			"minecraft:emitter_initialization": {
+				"per_update_expression": "variable.rot_time=variable.emitter_age+3.8; variable.rotx= math.max(math.min(-query.head_x_rotation(0),89),-89); variable.roty= query.head_y_rotation(0);"
+			},
+			"minecraft:emitter_local_space": {
+				"position": true,
+				"rotation": false
+			},
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 25,
+				"max_particles": 10
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 0.2
+			},
+			"minecraft:emitter_shape_point": {
+				"offset": ["(1.5*20*math.cos(variable.rotx)*(variable.rot_time))*math.sin(variable.roty)", "((1.5*20*math.sin(variable.rotx)*variable.rot_time)-(0.5*(9.8)*(variable.rot_time*variable.rot_time)))", "-(1.5*20*math.cos(variable.rotx)*(variable.rot_time))*math.cos(variable.roty)"]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 0.21
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["math.min((0.25 + query.distance_from_camera*0.025),1)", "math.min((0.25 + query.distance_from_camera*0.025),1)"],
+				"facing_camera_mode": "lookat_xyz",
+				"uv": {
+					"texture_width": 8,
+					"texture_height": 8,
+					"uv": [0, 0],
+					"uv_size": [8, 8]
+				}
+			},
+			/*"minecraft:particle_motion_collision": {
+				"collision_radius": 0.01,
+				"expire_on_contact": true
+			},*/
+			"minecraft:particle_appearance_tinting": {
+				"color": [0, 0.65, 1, 1]
+			}
+		}
+	}
+}

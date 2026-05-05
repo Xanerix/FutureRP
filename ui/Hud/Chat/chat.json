@@ -1,0 +1,130 @@
+{
+  "namespace": "chat",
+  "Chat": {
+    "type": "panel",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [
+      0,
+      -28
+    ],
+    "size": [
+      "40%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "ChatOn",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "stack_panel_a": {
+          "type": "stack_panel",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "factory": {
+            "name": "chat_item_factory",
+            "max_children_size": 50,
+            "control_ids": {
+              "chat_item": "chat_item@chat.chat_grid_item"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "chat_grid_item": {
+    "type": "panel",
+    "layer": 1,
+    "size": [
+      "100%-2px",
+      "100%c"
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "chat_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "offset": "@chat_start_anim",
+          "alpha": 0.5,
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "chat_text": {
+                "type": "label",
+                "layer": 31,
+                "text": "#text",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "shadow": true,
+                "localize": false,
+                "color": "$chat_text_color",
+                "font_type": "$chat_font_type",
+                "font_scale_factor": "$chat_font_scale_factor",
+                "bindings": [
+                  {
+                    "binding_name": "#chat_text",
+                    "binding_name_override": "#text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "chat_text_grid",
+                    "binding_condition": "once"
+                  }
+                ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [
+                  2,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "chat_start_anim": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.5,
+    "from": [
+      "-200%",
+      0
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "next": "@chat_wait_anim"
+  },
+  "chat_wait_anim": {
+    "anim_type": "wait",
+    "duration": 5.0,
+    "next": "@chat_end_anim"
+  },
+  "chat_end_anim": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "destroy_at_end": "chat_grid_item",
+    "duration": 0.5,
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      "-200%",
+      0
+    ]
+  }
+}

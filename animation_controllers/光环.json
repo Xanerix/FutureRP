@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.target_capsule": {
+      "initial_state": "off",
+      "states": {
+        "off": {
+          "on_entry": [
+            "v.capsule = 0.0;"
+          ],
+          "transitions": [
+            {
+              "on": "v.hurt_time>0.0f && q.distance_from_camera < 6"
+            }
+          ]
+        },
+        "on": {
+          "on_entry": [
+            "v.capsule_time = q.life_time;",
+            "v.capsule = 1.0;"
+          ],
+          "animations": [
+            "tc_move",
+            "tc_size"
+          ],
+          "transitions": [
+            {
+              "off": "v.capsule_time = v.hurt_time>0.0f?q.life_time:v.capsule_time; return (q.life_time - v.capsule_time >= 3.0f || q.distance_from_camera > 10);"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

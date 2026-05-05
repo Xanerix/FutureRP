@@ -1,0 +1,328 @@
+{
+  "dynamic_dialog_screen": {
+    "cache_screen": true,
+    "$header_safezone_control": "common.empty_panel",
+    "$header_bar_control": "common.empty_panel",
+    "$is_full_screen_layout": false,
+    "variables": [
+      {
+        "requires": "((not $game_pad) and (not $is_pregame) and $enable_future_setting)",
+        "$screen_content": "settings.FutureSettings"
+      },
+      {
+        "requires": "($is_pregame or (not $enable_future_setting))",
+        "$screen_content": "settings_common.settings_content"
+      }
+    ]
+  },
+  "future_option_toggle@settings_common.future_option_generic": {
+    "$one_line_layout": true,
+    "$control_name": "settings_common.future_option_toggle_control"
+  },
+  "future_option_slider@settings_common.future_option_generic": {
+    "$one_line_layout": false,
+    "$control_name": "settings_common.future_option_slider_control"
+  },
+  "future_option_generic": {
+    "type": "stack_panel",
+    "controls": [
+      {
+        "future_generic_core@future_generic_core": {}
+      },
+      {
+        "space": {
+          "type": "panel",
+          "size": [
+            0,
+            5
+          ]
+        }
+      }
+    ]
+  },
+  "future_generic_core": {
+    "$option_label|default": "",
+    "$option_enabled_binding_name|default": "",
+    "$option_enabled_binding_type|default": "global",
+    "bindings": [
+      {
+        "binding_type": "$option_enabled_binding_type",
+        "binding_name": "$option_enabled_binding_name",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "controls": [
+      {
+        "one_line_layout": {
+          "ignored": "(not $one_line_layout)",
+          "type": "panel",
+          "$toggle_size|default": [
+            200,
+            20
+          ],
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "p": {
+                "type": "panel",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": "$toggle_size",
+                "controls": [
+                  {
+                    "l": {
+                      "type": "label",
+                      "font_type": "$global_font_type",
+                      "enable_profanity_filter": false,
+                      "text": "$option_label",
+                      "font_scale_factor": 1.0,
+                      "layer": 15
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "$control_name@$control_name": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "two_line_layout": {
+          "ignored": "$one_line_layout",
+          "type": "stack_panel",
+          "$toggle_size|default": [
+            200,
+            20
+          ],
+          "size": [
+            "100%",
+            "default"
+          ],
+          "controls": [
+            {
+              "l": {
+                "type": "label",
+                "font_type": "$global_font_type",
+                "enable_profanity_filter": false,
+                "text": "$option_label",
+                "font_scale_factor": 1.0,
+                "layer": 15
+              }
+            },
+            {
+              "$control_name@$control_name": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "future_option_slider_control": {
+    "type": "panel",
+    "size": "$toggle_size",
+    "controls": [
+      {
+        "slider@common.slider": {
+          "size": [
+            "100%",
+            16
+          ],
+          "$slider_box_size": [
+            0,
+            0
+          ],
+          "offset": [
+            1,
+            0
+          ],
+          "$option_label|default": "",
+          "enabled": true,
+          "$slider_enabled_binding_name": "$option_enabled_binding_name",
+          "$slider_enabled_binding_type": "global"
+        }
+      }
+    ]
+  },
+  "future_option_toggle_control@common.toggle": {
+    "$texture_off|default": "ui/pic/ToggleOff",
+    "$texture_on|default": "ui/pic/ToggleOn",
+    "$option_label|default": "",
+    "size": "$toggle_size",
+    "$toggle_name|default": "",
+    "$toggle_state_binding_name|default": "$option_binding_name",
+    "$toggle_enabled_binding_name|default": "$option_enabled_binding_name",
+    "$toggle_enabled_binding_type|default": "global",
+    "$btn|default": "('button.'+$toggle_name)",
+    "$unchecked_control": "settings_common.toggle_off",
+    "$checked_control": "settings_common.toggle_on",
+    "$unchecked_hover_control": "settings_common.toggle_off",
+    "$checked_hover_control": "settings_common.toggle_on",
+    "$unchecked_locked_control": "settings_common.toggle_off",
+    "$unchecked_locked_hover_control": "settings_common.toggle_off",
+    "$checked_locked_control": "settings_common.toggle_on",
+    "$checked_locked_hover_control": "settings_common.toggle_on",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$btn",
+        "mapping_type": "pressed",
+        "consume_event": false
+      }
+    ]
+  },
+  "toggle_on": {
+    "type": "panel",
+    "size": "$toggle_size",
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "texture": "$texture_on",
+          "alpha": "@hud_anims.toggle_alpha_on",
+          "animation_reset_name": "$btn",
+          "size": "$toggle_size",
+          "layer": 11
+        }
+      },
+      {
+        "bg2": {
+          "type": "image",
+          "alpha": "@hud_anims.toggle_alpha_on",
+          "texture": "$texture_off",
+          "size": "$toggle_size",
+          "layer": 10
+        }
+      }
+    ]
+  },
+  "toggle_off": {
+    "type": "panel",
+    "size": "$toggle_size",
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "texture": "$texture_on",
+          "alpha": "@hud_anims.toggle_alpha_off",
+          "animation_reset_name": "$btn",
+          "size": "$toggle_size",
+          "layer": 11
+        }
+      },
+      {
+        "bg2": {
+          "type": "image",
+          "alpha": "@hud_anims.toggle_alpha_on",
+          "texture": "$texture_off",
+          "size": "$toggle_size",
+          "layer": 10
+        }
+      }
+    ]
+  },
+  "future_select": {
+    "type": "stack_panel",
+    "controls": [
+      {
+        "space0": {
+          "type": "panel",
+          "size": [
+            0,
+            2.5
+          ]
+        }
+      },
+      {
+        "future_select_core@future_select_core": {}
+      },
+      {
+        "space1": {
+          "type": "panel",
+          "size": [
+            0,
+            2.5
+          ]
+        }
+      }
+    ]
+  },
+  "future_select_control@common.toggle": {
+    "size": "$toggle_size",
+    "$toggle_name|default": "",
+    "$toggle_state_binding_name|default": "$toggle_view_binding_name",
+    "$unchecked_control": "settings_common.toggle_off",
+    "$checked_control": "settings_common.toggle_on",
+    "$unchecked_hover_control": "settings_common.toggle_off",
+    "$checked_hover_control": "settings_common.toggle_on",
+    "$unchecked_locked_control": "settings_common.toggle_off",
+    "$unchecked_locked_hover_control": "settings_common.toggle_off",
+    "$checked_locked_control": "settings_common.toggle_on",
+    "$checked_locked_hover_control": "settings_common.toggle_on",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$btn",
+        "mapping_type": "pressed",
+        "consume_event": false
+      }
+    ],
+    "$btn": "('button.'+$toggle_view_binding_name)",
+    "$option_binding_name": "$toggle_view_binding_name",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": "$default_selector_toggle_index"
+  },
+  "future_select_core": {
+    "type": "panel",
+    "$control_name": "settings_common.future_select_control",
+    "$button_text|default": "",
+    "$texture_off|default": "ui/pic/MenuSelectOff",
+    "$texture_on|default": "ui/pic/MenuSelectOn",
+    "size": [
+      90,
+      35
+    ],
+    "controls": [
+      {
+        "one_line_layout": {
+          "type": "panel",
+          "$toggle_size|default": [
+            90,
+            35
+          ],
+          "size": "$toggle_size",
+          "controls": [
+            {
+              "l": {
+                "type": "label",
+                "font_type": "$global_font_type",
+                "enable_profanity_filter": false,
+                "text": "$button_text",
+                "font_scale_factor": 1.0,
+                "layer": 15
+              }
+            },
+            {
+              "$toggle_view_binding_name@$control_name": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

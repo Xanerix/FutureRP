@@ -1,0 +1,116 @@
+{
+  "namespace": "cc",
+  "CompassClock": {
+    "type": "input_panel",
+    "draggable": "both",
+    "prevent_touch_input": true,
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [
+      -140,
+      -8
+    ],
+    "size": [
+      40,
+      20
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      }
+    ],
+    "controls": [
+      {
+        "compass_and_clock": {
+          "type": "panel",
+          "controls": [
+            {
+              "background_left": {
+                "type": "image",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [
+                  0,
+                  2
+                ],
+                "texture": "textures/Xanerix/compass_bg",
+                "size": [
+                  20,
+                  20
+                ],
+                "alpha": 0.3,
+                "layer": -1
+              }
+            },
+            {
+              "background_right": {
+                "type": "image",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [
+                  20,
+                  2
+                ],
+                "texture": "textures/Xanerix/clock_bg",
+                "size": [
+                  20,
+                  20
+                ],
+                "alpha": 0.3,
+                "layer": -1
+              }
+            },
+            {
+              "Compass": {
+                "type": "custom",
+                "renderer": "inventory_item_renderer",
+                "size": [
+                  16,
+                  16
+                ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [
+                  2,
+                  0
+                ],
+                "property_bag": {
+                  "#item_id_aux": 22609920
+                }
+              }
+            },
+            {
+              "Clock": {
+                "type": "custom",
+                "renderer": "inventory_item_renderer",
+                "size": [
+                  16,
+                  16
+                ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [
+                  19,
+                  0
+                ],
+                "property_bag": {
+                  "#item_id_aux": 22740992
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "CompassClockOn",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

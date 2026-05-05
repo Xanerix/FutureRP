@@ -1,0 +1,32 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.xc.item",
+        "texture_width": 16.0,
+        "texture_height": 16.0
+      },
+      "bones": [
+        {
+          "name": "rightitem",
+          // "pivot": [
+            // 0,
+            // -11.3137085,
+            // 0
+          // ],
+          "texture_meshes": [
+            {
+              "rotation": [
+                0,
+               -135,
+                90
+              ],
+              "texture": "default"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

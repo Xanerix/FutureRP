@@ -1,0 +1,70 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.cross": {
+			"loop": true,
+			"bones": {
+				"cross_0": {
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"position": [
+						0,
+						2000,
+						0
+					]
+				},
+				"cross_1": {
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"position": [
+						0,
+						"(math.sin(variable.attack_time*180)*variable.attack_time*5)",
+						0
+					]
+				},
+				"cross_2": {
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"position": [
+						"(math.sin(variable.attack_time*180)*variable.attack_time*5)",
+						0,
+						0
+					]
+				},
+				"cross_3": {
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"position": [
+						0,
+						"-(math.sin(variable.attack_time*180)*variable.attack_time*5)",
+						0
+					]
+				},
+				"cross_4": {
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"position": [
+						"-(math.sin(variable.attack_time*180)*variable.attack_time*5)",
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

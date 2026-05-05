@@ -1,0 +1,76 @@
+{
+  "namespace": "item_text",
+  "item_name_text_root": {
+    "type": "panel",
+    "visible": true,
+    "size": [
+      "100%cm",
+      "100%cm"
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "item_text_aligner": {
+          "type": "stack_panel",
+          "size": [
+            "100%cm",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "item_text_control": {
+                "type": "panel",
+                "size": [
+                  "100%cm",
+                  "100%cm"
+                ],
+                "controls": [
+                  {
+                    "item_text_background": {
+                      "type": "image",
+                      "size": [
+                        "100%sm + 12px",
+                        "100%sm + 5px"
+                      ],
+                      "texture": "textures/ui/hud_tip_text_background",
+                      "alpha": "@hud.anim_item_name_background_alpha_in"
+                    }
+                  },
+                  {
+                    "item_text_label": {
+                      "type": "label",
+                      "max_size": [
+                        200,
+                        "default"
+                      ],
+                      "text_alignment": "center",
+                      "layer": 31,
+                      "color": "$text_color",
+                      "text": "#text",
+                      "bindings": [
+                        {
+                          "binding_name": "$text_binding",
+                          "binding_name_override": "#text"
+                        }
+                      ],
+                      "alpha": "@hud.anim_item_name_text_alpha_in"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ItemText@item_name_text_root": {
+    "$text_color": "White",
+    "$text_binding": "#item_text"
+  },
+  "JukeboxText@ItemText": {
+    "$text_color": "White",
+    "$text_binding": "#jukebox_text"
+  }
+}

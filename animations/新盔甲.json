@@ -1,0 +1,64 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.armor_bar": {
+			"loop": true,
+			"bones": {
+				"armor_bar": {
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"position": [
+						3,
+						4000,
+						0
+					],
+					"scale": [
+						"v.armor_base/20*9-0.5",
+						"((query.has_armor_slot(0)+query.has_armor_slot(1)+query.has_armor_slot(2)+query.has_armor_slot(3))!=0)*10",
+						0
+					]
+				},
+				"armor_left": {
+					"position": [
+						3,
+						4000,
+						0
+					],
+					"scale": [
+						10,
+						"((query.has_armor_slot(0)+query.has_armor_slot(1)+query.has_armor_slot(2)+query.has_armor_slot(3))!=0)*10",
+						0
+					]
+				},
+				"armor_right": {
+					"position": [
+						"v.armor_base/20*90-2",
+						4000,
+						0
+					],
+					"scale": [
+						10,
+						"((query.has_armor_slot(0)+query.has_armor_slot(1)+query.has_armor_slot(2)+query.has_armor_slot(3))!=0)*10",
+						0
+					]
+				}
+			}
+		},
+		"animation.player.armor_bar_anim": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"armor_bar": {
+					"rotation": [
+						"v.armor_base=v.armor_base+v.armor_delta/50;return 0;",
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

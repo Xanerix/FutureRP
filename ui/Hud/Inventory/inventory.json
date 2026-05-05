@@ -1,0 +1,146 @@
+{
+	"namespace": "hud_inventory",
+	"HudInventory": {
+		"type": "input_panel",
+		"draggable": "both",
+		"prevent_touch_input": true,
+		"anchor_from": "bottom_right",
+		"anchor_to": "bottom_right",
+		"offset": [
+			0,
+			0
+		],
+		"size": [
+			126,
+			41
+		],
+		"button_mappings": [
+			{
+				"from_button_id": "button.menu_select",
+				"to_button_id": "button.menu_select",
+				"mapping_type": "pressed"
+			}
+		],
+		"bindings": [
+			{
+				"binding_type": "view",
+				"source_control_name": "HudInventoryOn",
+				"source_property_name": "#toggle_state",
+				"target_property_name": "#visible"
+			}
+		],
+		"controls": [
+			{
+				"hudinventory": {
+					"type": "panel",
+					"size": [
+						126,
+						41
+					],
+					"layer": 19,
+					"clips_children": true,
+					"$hotbar_collection_name": "hotbar_items",
+					"controls": [
+						{
+							"inv_grid": {
+								"type": "grid",
+								"anchor_from": "bottom_middle",
+								"anchor_to": "top_middle",
+								"offset": [
+									0,
+									-56
+								],
+								"collection_name": "$hotbar_collection_name",
+								"grid_dimensions": [
+									9,
+									4
+								],
+								"grid_item_template": "hud_inventory.inv_grid_item"
+							}
+						},
+						{
+							"background": {
+								"type": "image",
+								"size": [
+									"100%",
+									"100%"
+								],
+								"texture": "textures/Xanerix/inv_bg",
+								"alpha": 0.7,
+								"layer": 20
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+	"inv_grid_item": {
+		"type": "panel",
+		"size": [
+			14,
+			14
+		],
+		"layer": 21,
+		"bindings": [
+			{
+				"binding_collection_name": "$hotbar_collection_name",
+				"binding_type": "collection_details"
+			}
+		],
+		"$durability_bar_required|default": true,
+		"$stack_count_required|default": true,
+		"controls": [
+			{
+				"main": {
+					"type": "panel",
+					"size": [
+						14,
+						14
+					],
+					"controls": [
+						{
+							"item_icon@hud.hotbar_hud_item_icon": {
+								"layer": 22,
+								"size": [
+									12,
+									12
+								]
+							}
+						},
+						{
+							"item_dura@hud.item_durability": {
+								"layer": 23
+							}
+						},
+						{
+							"item_stack_count@common.stack_count_label": {
+								"font_type": "$global_font_type",
+								"layer": 24,
+								"font_scale_factor": 0.8,
+								"bindings": [
+									{
+										"binding_collection_name": "$hotbar_collection_name",
+										"binding_name": "#inventory_stack_count",
+										"binding_type": "collection"
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"slot_background": {
+					"type": "image",
+					"size": [
+						"100%-1px",
+						"100%-1px"
+					],
+					"alpha": 0.02,
+					"texture": "textures/ui/White"
+				}
+			}
+		]
+	}
+}

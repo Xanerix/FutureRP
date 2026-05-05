@@ -1,0 +1,83 @@
+{
+	"materials": {
+		"version": "1.0.0",
+		"on_screen_effect:entity_alphatest": {},
+		"item_in_hand_glint_xc:item_in_hand": {
+			"+defines": [
+				"GLINT",
+				"GLINT_ITEM"
+			]
+		},
+		"entity_alphatest_glint_item_xc:entity_alphatest": {
+			"+defines": [
+				"GLINT"//,
+				//"GLINT_ITEM"
+			]
+		},
+		"direction_hud:entity_alphablend": {
+			"+defines": [
+				"USE_UV_ANIM",
+				"USE_MULTITEXTURE"
+			],
+			"msaaSupport": "Both",
+			"+samplerStates": [
+				{
+					"samplerIndex": 0,
+					"textureWrap": "Repeat",
+					"textureFilter": "Point"
+				},
+				{
+					"samplerIndex": 1,
+					"textureWrap": "Repeat",
+					"textureFilter": "Point"
+				},
+				{
+					"samplerIndex": 2,
+					"textureWrap": "Repeat",
+					"textureFilter": "Point"
+				}
+			]
+		},
+		"armor:entity_alphatest": {
+			"+defines": [
+				"LONEL_ENTITY_TS_ARMOR_ZD"
+			]
+		},
+		"armor_leather:entity_alphatest_change_color": {
+			"+defines": [
+				"LONEL_ENTITY_TS_ARMOR_ZD"
+			]
+		},
+		"armor_enchanted:entity_alphatest_glint": {
+			"+defines": [
+				"LONEL_ENTITY_TS_ARMOR_ZD"
+			]
+		},
+		"armor_leather_enchanted:entity_alphatest_change_color_glint": {
+			"+defines": [
+				"LONEL_ENTITY_TS_ARMOR_ZD"
+			]
+		},
+		"bed:entity_alphatest": {
+			"+defines": [
+				"LONEL_ENTITY_TS_BED_ZD"
+			]
+		},
+		"chest:entity": {
+			"+defines": [
+				"LONEL_ENTITY_TS_CHEST_ZD"
+			]
+		},
+		"sign:entity_static": {
+			"+defines": [
+				"LONEL_ENTITY_TS_OFF"
+			]
+		},
+		"target_capsule:entity_alphablend": {
+			"+states": [
+				"DisableCulling"
+			],
+			"depthFunc": "Always"
+		}
+	}
+}

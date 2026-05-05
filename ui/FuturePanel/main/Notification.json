@@ -1,0 +1,84 @@
+{
+  "namespace": "notification",
+  "Notification": {
+    "type": "stack_panel",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "size": [
+      100,
+      "100%c"
+    ],
+    "layer": 32767,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "NotificationOn",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "clickgui@hud_base.progress_item_base": {
+          "$function": "ClickGUI",
+          "$sub_function": "List of function",
+          "$btn": "botton.clickgui",
+          "$c": "hud_controls.clickgui_c"
+        }
+      },
+      // {
+        // "cursor@hud_base.progress_item_base": {
+          // "$function": "Dynamic",
+          // "$function_layout": "Cross",
+          // "$sub_function": "RGB cursor",
+          // "$btn": "botton.dynamic",
+          // "$c": "hud_controls.cursor_c"
+        // }
+      // },
+      // {
+        // "arraylist@hud_base.progress_item_base": {
+          // "$function": "ArrayList",
+          // "$btn": "botton.arraylist",
+          // "$c": "hud_controls.arraylist_c"
+        // }
+      // },
+      {
+        "notification@hud_base.progress_item_base": {
+          "$function": "Notification",
+          "$sub_function": "It's still coding",
+          "$btn": "botton.noticifation",
+          "$c": "hud_controls.notification_c"
+        }
+      },
+      // {
+        // "chat@hud_base.progress_item_base": {
+          // "$function": "Chat",
+          // "$btn": "botton.chat",
+          // "$c": "hud_controls.chat_c"
+        // }
+      // },
+      // {
+        // "itemtext@hud_base.progress_item_base": {
+          // "$function": "ItemText",
+          // "$btn": "botton.itemtext",
+          // "$c": "hud_controls.itemtext_c"
+        // }
+      // },
+      // {
+        // "bossbar@hud_base.progress_item_base": {
+          // "$function": "BossBar",
+          // "$btn": "botton.bossbar",
+          // "$c": "hud_controls.bossbar_c"
+        // }
+      // },
+      {
+        "welcome@hud_base.progress_item_base": {
+          "$function": "Welcome",
+          "$btn": "",
+          "$sub_function": "Client is ready",
+          "bindings": []
+        }
+      }
+    ]
+  }
+}

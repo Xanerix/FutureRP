@@ -1,0 +1,74 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.health_bar": {
+			"loop": true,
+			"bones": {
+				"health_bar": {
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"position": [
+						-88,
+						4000,
+						0
+					],
+					"scale": [
+						"v.health_base/q.max_health*9-0.5",
+						"(q.health!=0)*10",
+						1
+					]
+				},
+				"health_left": {
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"position": [
+						-88,
+						4000,
+						0
+					],
+					"scale": [
+						10,
+						"(q.health!=0)*10",
+						1
+					]
+				},
+				"health_right": {
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"position": [
+						"-93+v.health_base/q.max_health*90",
+						4000,
+						0
+					],
+					"scale": [
+						10,
+						"(q.health!=0)*10",
+						1
+					]
+				}
+			}
+		},
+		"animation.player.health_bar_anim": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"health_bar": {
+					"rotation": [
+						"v.health_base=v.health_base+v.health_delta/50;return 0;",
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

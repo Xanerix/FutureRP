@@ -1,0 +1,115 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.is_swim": {
+      "loop": true,
+      "bones": {
+        "health_bar": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "health_left": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "health_right": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "armor_bar": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "armor_left": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "armor_right": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "cross_0": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "cross2_0": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "direction_hud": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "item2d_0": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "item2d_1": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "item2d_2": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "item2d_3": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "item2d_4": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        },
+        "target_capsule": {
+          "position": [
+            0,
+            -20,
+            0
+          ]
+        }
+      }
+    }
+  }
+}

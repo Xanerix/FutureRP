@@ -1,0 +1,26 @@
+{
+  "ui_defs": [
+    "ui/Hud/DurabilityViewer/durability_viewer.json",
+    "ui/Hud/Inventory/inventory.json",
+    "ui/Hud/Animations/hud_anims.json",
+    "ui/Hud/Animations/rgb.json",
+    "ui/Hud/HandHoldCounter/handhold.json",
+    "ui/Hud/Hotbar/hotbar_base.json",
+    "ui/Hud/Hotbar/hotbar.json",
+    "ui/Hud/Chat/chat.json",
+    "ui/Hud/BossBar/bossbar.json",
+    "ui/Hud/ItemText/item_text.json",
+    "ui/Hud/BetterHealthArmor/better_ha.json",
+    "ui/Hud/OffhandArmor/offhand_armor.json",
+    "ui/Hud/CompassClock/compass_clock.json",
+    "ui/Hud/DynamicCursor/dynamic_cursor.json",
+    "ui/Hud/WacDetectTest/wac_detect.json",
+    "ui/FuturePanel/hud_base.json",
+    "ui/FuturePanel/hud_controls.json",
+    "ui/FuturePanel/main/ArrayList.json",
+    "ui/FuturePanel/main/ClickGui.json",
+    "ui/FuturePanel/main/Menu.json",
+    "ui/FuturePanel/main/Notification.json",
+    "!config.txt"
+  ]
+}
